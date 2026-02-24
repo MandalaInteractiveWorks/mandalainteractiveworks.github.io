@@ -3,88 +3,124 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>MANDARA STEPS | Goal Planning & Focus Timer</title>
-  <meta name="description" content="MANDARA STEPS helps you define goals, break them down with a mandala map, and stay focused with a timer." />
-  <style>
-    :root {
-      --bg: #f6f7f9;
-      --fg: #15171a;
-      --muted: #5b6068;
-      --card: #ffffff;
-      --line: #e4e7ec;
-      --accent: #0f172a;
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      background: radial-gradient(1200px 420px at 50% -80px, #eef2ff 0%, var(--bg) 55%);
-      color: var(--fg);
-    }
-    main { max-width: 920px; margin: 56px auto; padding: 0 20px; }
-    .hero, .section {
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      padding: 28px;
-      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
-    }
-    .section { margin-top: 16px; }
-    h1 { margin: 0 0 8px; font-size: clamp(28px, 5vw, 42px); line-height: 1.08; }
-    h2 { margin: 0 0 10px; font-size: 22px; }
-    p, li { color: var(--muted); line-height: 1.65; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 12px; margin-top: 14px; }
-    .chip {
-      background: #fafbff;
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      padding: 14px;
-    }
-    .links { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 14px; }
-    .btn {
-      text-decoration: none;
-      color: #fff;
-      background: var(--accent);
-      border-radius: 10px;
-      padding: 10px 14px;
-      font-weight: 600;
-      display: inline-block;
-    }
-    .btn.secondary {
-      color: var(--fg);
-      background: #fff;
-      border: 1px solid var(--line);
-    }
-    footer { margin-top: 16px; color: #6b7280; font-size: 13px; text-align: center; }
-  </style>
+  <title>MANDARA STEPS | Goal planner & focus timer</title>
+  <meta name="description" content="Set a goal and break it down with a mandala plan. Local-first. No accounts. No ads in v1.0." />
+  <meta name="robots" content="index,follow" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Mandala Interactive Works" />
+  <meta property="og:title" content="MANDARA STEPS | Goal planner & focus timer" />
+  <meta property="og:description" content="Set a goal and break it down with a mandala plan." />
+  <meta property="og:url" content="https://mandalainteractiveworks.github.io/" />
+  <meta property="og:image" content="https://mandalainteractiveworks.github.io/assets/img/og-cover.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="MANDARA STEPS | Goal planner & focus timer" />
+  <meta name="twitter:description" content="Set a goal and break it down with a mandala plan." />
+  <meta name="twitter:image" content="https://mandalainteractiveworks.github.io/assets/img/og-cover.png" />
+
+  <link rel="canonical" href="https://mandalainteractiveworks.github.io/" />
+  <link rel="alternate" hreflang="x-default" href="https://mandalainteractiveworks.github.io/" />
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png" />
+
+  <link rel="stylesheet" href="/assets/css/site.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "Mandala Interactive Works",
+        "url": "https://mandalainteractiveworks.github.io/",
+        "logo": "https://mandalainteractiveworks.github.io/assets/favicon/apple-touch-icon.png",
+        "email": "mandalainteractiveworks@gmail.com"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "MANDARA STEPS",
+        "operatingSystem": "iOS",
+        "applicationCategory": "ProductivityApplication",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Mandala Interactive Works"
+        },
+        "url": "https://apps.apple.com/app/id6758521973"
+      }
+    ]
+  }
+  </script>
 </head>
-<body>
-  <main>
-    <section class="hero">
-      <h1>MANDARA STEPS</h1>
-      <p>Plan goals with a mandala map, turn big ideas into next actions, and keep momentum with a focus timer.</p>
-      <div class="links">
-        <a class="btn" href="/support.html">Support</a>
-        <a class="btn secondary" href="/privacy.html">Privacy Policy</a>
-      </div>
-    </section>
+<body data-page="home">
+  <div class="page">
+    <header class="topbar">
+      <a class="brand" href="/" data-keep-locale>
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>
+          <p class="brand-title">MANDARA STEPS</p>
+          <p class="brand-sub">Mandala Interactive Works</p>
+        </span>
+      </a>
+      <select class="locale-select" id="locale-select" aria-label="Language"></select>
+    </header>
 
-    <section class="section">
-      <h2>What You Can Do</h2>
-      <div class="grid">
-        <div class="chip"><strong>Goal Map</strong><br/>Break one primary goal into focused sub-goals.</div>
-        <div class="chip"><strong>Focus Timer</strong><br/>Run timer sessions and keep a steady work rhythm.</div>
-        <div class="chip"><strong>Logs</strong><br/>Review your focus sessions and progress over time.</div>
-      </div>
-    </section>
+    <main>
+      <section class="hero card">
+        <p class="hero-eyebrow" data-i18n="appName">MANDARA STEPS</p>
+        <h1 data-i18n="heroTitle">Welcome to MANDARA STEPS</h1>
+        <p class="hero-subtitle" data-i18n="heroSubtitle">Set a goal and break it down with a mandala plan.</p>
+        <p class="hero-tagline" data-i18n="appTagline">Goal planner & focus timer</p>
+        <div class="actions">
+          <a class="btn primary" data-appstore-link href="https://apps.apple.com/app/id6758521973" target="_blank" rel="noopener noreferrer" data-i18n="ctaAppStore">App Store</a>
+          <a class="btn ghost" href="/support.html" data-keep-locale data-i18n="navSupport">Support</a>
+          <a class="btn ghost" href="/privacy.html" data-keep-locale data-i18n="navPrivacy">Privacy Policy</a>
+        </div>
+      </section>
 
-    <section class="section">
-      <h2>Publisher</h2>
-      <p>Mandala Interactive Works</p>
-      <p>Contact: <a href="mailto:mandalainteractiveworks@gmail.com">mandalainteractiveworks@gmail.com</a></p>
-    </section>
+      <section class="features-wrap">
+        <h2 class="section-heading" data-i18n="featuresHeading">What matters most today?</h2>
+        <div class="features-grid">
+          <article class="feature-card card">
+            <h2 data-i18n="featureGoalTitle">Create Goal</h2>
+            <p data-i18n="featureGoalBody">Tap a card to set a goal</p>
+          </article>
+          <article class="feature-card card">
+            <h2 data-i18n="featureFocusTitle">Focus / Timer</h2>
+            <p data-i18n="featureFocusBody">Session complete. Save to your log.</p>
+          </article>
+          <article class="feature-card card">
+            <h2 data-i18n="featureLogsTitle">Logs</h2>
+            <p data-i18n="featureLogsBody">No logs yet. Complete a focus session to get started.</p>
+          </article>
+        </div>
+      </section>
 
-    <footer>Last updated: 2026-02-18</footer>
-  </main>
+      <section class="trust card">
+        <h2 data-i18n="trustTitle">Privacy</h2>
+        <p data-i18n="trustBody">Local-first. No accounts. No ads in v1.0.</p>
+        <p class="muted" data-i18n="trustDetail">MANDARA STEPS is local-first. Your goals, sessions, logs, and selected photos stay on device. We do not collect accounts, location, or ad identifiers in v1.0.</p>
+      </section>
+
+      <section class="publisher card">
+        <h2 data-i18n="publisherHeading">Mandala Interactive Works (MIW)</h2>
+        <p data-i18n="publisherMission">Start with one goal today.</p>
+        <p><a href="mailto:mandalainteractiveworks@gmail.com">mandalainteractiveworks@gmail.com</a></p>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <span>Updated: <time data-updated-at>2026-02-25</time></span>
+      <nav class="footer-links">
+        <a href="/support.html" data-keep-locale data-i18n="navSupport">Support</a>
+        <a href="/privacy.html" data-keep-locale data-i18n="navPrivacy">Privacy Policy</a>
+      </nav>
+    </footer>
+  </div>
+
+  <script defer src="/assets/js/i18n.js"></script>
+  <script defer src="/assets/js/site.js"></script>
 </body>
 </html>
